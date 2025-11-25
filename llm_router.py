@@ -8,7 +8,7 @@ from utils.embeddings import EmbeddingProvider
 
 Task = Literal["search", "summarize", "synthesize", "critique", "gaps"]
 
-# ✅ token caps per step
+
 TOKEN_LIMITS: Dict[Task, int] = {
     "search": 128,
     "summarize": 256,
@@ -18,7 +18,6 @@ TOKEN_LIMITS: Dict[Task, int] = {
 }
 
 
-# --------- LLM FACTORY (OpenRouter via OpenAI protocol) ----------
 def _make_openrouter_llm(model: str, temperature: float = 0.2, max_tokens: int = 256) -> ChatOpenAI:
     api_key = os.getenv("OPENROUTER_API_KEY")
     if not api_key:
