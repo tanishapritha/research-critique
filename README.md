@@ -25,10 +25,3 @@ Run the interactive UI:
 ```
 streamlit run streamlit_app.py
 ```
-
-▶️ FastAPI Backend
-
-Run the backend API server:
-```
-uvicorn app:app --reload
-```
